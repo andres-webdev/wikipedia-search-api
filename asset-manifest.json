@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/wikipedia-search-api/static/css/main.755fccc4.css",
+    "main.js": "/wikipedia-search-api/static/js/main.feda2753.js",
+    "index.html": "/wikipedia-search-api/index.html",
+    "main.755fccc4.css.map": "/wikipedia-search-api/static/css/main.755fccc4.css.map",
+    "main.feda2753.js.map": "/wikipedia-search-api/static/js/main.feda2753.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.755fccc4.css",
+    "static/js/main.feda2753.js"
+  ]
+}
