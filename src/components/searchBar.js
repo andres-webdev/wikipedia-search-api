@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import wikipedia from "../api/api-wikipedia";
 import Article from "./articles";
 
 function SearchBar(){
@@ -7,16 +8,15 @@ function SearchBar(){
 
     function change(event){
 
-        const search = async (event) => {
+        async function search(event){
 
             if(event.target.value == ''){
                 setState([]);    
             } else{
 
-                const url = await fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info|extracts&inprop=url&utf8=&format=json&origin=*&srlimit=10&srsearch=${event.target.value}`);
-                const data2 = await url.json();
-                
-                setState(data2.query.search);
+                const response = await wikipedia.get(`${event.target.value}`);
+            
+                setState(response.data.query.search);
             }
         }
 
